@@ -1,6 +1,4 @@
-# lexicon-assignment-todo
-
-# Todo IT
+# Lexicon assignment Todo IT
 
 ### Topics:
 
