@@ -19,9 +19,16 @@ public class Main {
         //System.out.println(goran.getId());
         //toDoGoran.setCreator(goran);
 
+
         //System.out.println(toDoGoran.getCreator());
         System.out.println("overdue " + toDoGoran.isOverdue());
         System.out.println("todo id " + toDoGoran.getId());
+
+        TodoItemTask taskForGoran = new TodoItemTask(toDoGoran,goran);
+
+        //taskForGoran.setAssigned(false);
+        System.out.println("is Assigned " + taskForGoran.isAssigned());
+        System.out.println(taskForGoran.toString());
 
     }
 
