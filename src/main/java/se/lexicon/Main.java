@@ -14,5 +14,9 @@ public class Main {
         //System.out.println(goran.getId());
         //toDoGoran.setCreator(goran);
         //System.out.println(toDoGoran.getCreator());
+        AppUser me = new AppUser("gogo","pass",AppRole.ROLE_APP_ADMIN);
+
+        System.out.println(me.getRole());
+
     }
 }
