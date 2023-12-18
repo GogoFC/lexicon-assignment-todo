@@ -5,9 +5,9 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
         Person goran = new Person("Goran","Muminovic","goran@aol.com");
-        System.out.println(goran.getSummary());
+        System.out.println(goran.toString());
         Person amra = new Person("Amra", "Piragic","amra@sol.com");
-        System.out.println(amra.getSummary());
+        System.out.println(amra.toString());
         TodoItem toDoGoran = new TodoItem("Assignment Part 1","Constructs, Unit test", LocalDate.of(2023,12,11),goran);
         System.out.println(toDoGoran.getSummary());
         
@@ -17,6 +17,8 @@ public class Main {
         AppUser me = new AppUser("gogo","pass",AppRole.ROLE_APP_ADMIN);
 
         System.out.println(me.getRole());
+        System.out.println(goran.hashCode());
+
 
     }
 }

@@ -11,6 +11,9 @@ public class Person {
 
     private String email;
 
+    private AppUser credentials;
+
+
     public Person(String firstName, String lastName, String email) {
         setFirstName(firstName);
         setLastName(lastName);
@@ -21,6 +24,7 @@ public class Person {
 
 
 
+    /*
     public String getSummary() {
         return new StringJoiner(", ", Person.class.getSimpleName() + " [", "]")
                 .add("id=" + id)
@@ -28,6 +32,27 @@ public class Person {
                 .add("lastName='" + lastName + "'")
                 .add("email='" + email + "'")
                 .toString();
+    }
+    */
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Person.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("firstName='" + firstName + "'")
+                .add("lastName='" + lastName + "'")
+                .add("email='" + email + "'")
+                .toString();
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 
     public String getFirstName() {
@@ -63,5 +88,13 @@ public class Person {
 
     public void setId(int id) {
         this.id = IdGenerator.generateId();
+    }
+
+    public AppUser getCredentials() {
+        return credentials;
+    }
+
+    public void setCredentials(AppUser credentials) {
+        this.credentials = credentials;
     }
 }
