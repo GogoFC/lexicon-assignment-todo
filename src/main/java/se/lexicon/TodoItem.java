@@ -1,6 +1,7 @@
 package se.lexicon;
 
 import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
 import java.util.StringJoiner;
 
 public class TodoItem {
@@ -24,6 +25,8 @@ public class TodoItem {
         //setDeadLine(DateTimeFormatter.ofPattern.String.valueOf(deadLine));
         setDeadLine(deadLine);
         setCreator(creator);
+        setId(id);
+
         //At first this ran without Person creator at the end. Then creator was null. Then below .getFirstName() wouldn't work because creator was null.
     }
 
@@ -36,6 +39,20 @@ public class TodoItem {
                 .add("done=" + done)
                 .add("creator=" + creator.getFirstName()) // added .getFirstName() otherwise it was null.
                 .toString();
+    }
+
+
+
+    public boolean isOverdue(){
+        if (LocalDate.now().isAfter(deadLine)) return true;
+        return false;
+    }
+
+    public boolean isDone (){
+        //if (done == true) return true;
+        //if (done) return true;
+        //        return false;
+        return done;
     }
 /*
     public String getCreator() {
@@ -50,6 +67,7 @@ public class TodoItem {
     }
 
     public void setTitle(String title) {
+        if (title.isEmpty()) throw new IllegalArgumentException("Title empty");
         this.title = title;
     }
 
@@ -66,6 +84,7 @@ public class TodoItem {
     }
 
     public void setDeadLine(LocalDate deadLine) {
+        if (deadLine == null) throw new IllegalArgumentException("null");
         //DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy/M/d");
         //setDeadLine(DateTimeFormatter.ofPattern.String.valueOf(deadLine));
         //this.deadLine = DateTimeFormatter.ofPattern("yyyy/M/d").parse(deadLine);
@@ -82,5 +101,18 @@ public class TodoItem {
         //this.creator = this.id;
         this.creator = creator;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = IdGenerator.generateId();
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
+    }
+
 
 }

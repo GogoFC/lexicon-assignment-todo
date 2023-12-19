@@ -64,7 +64,8 @@ public class Person {
     }
 
     public void setFirstName(String firstName) {
-        if (firstName.isBlank()) throw new IllegalArgumentException("Enter First Name");
+        //if (firstName.isBlank()) throw new IllegalArgumentException("Enter First Name");
+        if (firstName == null) throw new IllegalArgumentException("null");
         this.firstName = firstName;
     }
 
@@ -73,7 +74,8 @@ public class Person {
     }
 
     public void setLastName(String lastName) {
-        if (lastName.isBlank()) throw new IllegalArgumentException("Enter Last Name");
+        if (lastName == null) throw new IllegalArgumentException("null");
+        //if (lastName.isBlank()) throw new IllegalArgumentException("Enter Last Name");
         this.lastName = lastName;
     }
 
@@ -82,7 +84,8 @@ public class Person {
     }
 
     public void setEmail(String email) {
-        if (email.isBlank()) throw new IllegalArgumentException("Enter email");
+        if (email == null) throw new IllegalArgumentException("null");
+        //if (email.isBlank()) throw new IllegalArgumentException("Enter email");
         this.email = email;
     }
 
