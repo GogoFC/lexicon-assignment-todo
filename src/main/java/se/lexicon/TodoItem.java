@@ -1,5 +1,7 @@
 package se.lexicon;
 
+import se.lexicon.sequencers.TodoItemIdSequencer;
+
 import java.time.LocalDate;
 import java.time.chrono.ChronoLocalDate;
 import java.util.StringJoiner;
@@ -107,7 +109,8 @@ public class TodoItem {
     }
 
     public void setId(int id) {
-        this.id = IdGenerator.generateId();
+        //this.id = IdGenerator.generateId();
+        this.id = TodoItemIdSequencer.nextId();
     }
 
     public void setDone(boolean done) {

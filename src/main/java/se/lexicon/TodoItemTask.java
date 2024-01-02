@@ -1,5 +1,7 @@
 package se.lexicon;
 
+import se.lexicon.sequencers.TodoItemTaskIdSequencer;
+
 import java.util.StringJoiner;
 
 public class TodoItemTask {
@@ -39,7 +41,8 @@ public class TodoItemTask {
     }
 
     public void setId(int id) {
-        this.id = IdGenerator.generateId();
+        //this.id = IdGenerator.generateId();
+        this.id = TodoItemTaskIdSequencer.nextId();
     }
 
     public boolean isAssigned() {

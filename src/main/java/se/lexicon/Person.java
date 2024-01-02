@@ -1,5 +1,7 @@
 package se.lexicon;
 
+import se.lexicon.sequencers.PersonIdSequencer;
+
 import java.util.Objects;
 import java.util.StringJoiner;
 
@@ -94,7 +96,8 @@ public class Person {
     }
 
     public void setId(int id) {
-        this.id = IdGenerator.generateId();
+        //this.id = IdGenerator.generateId();
+        this.id = PersonIdSequencer.nextId();
     }
 
     public AppUser getCredentials() {

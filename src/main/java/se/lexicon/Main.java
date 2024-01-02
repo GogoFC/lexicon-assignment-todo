@@ -12,6 +12,8 @@ public class Main {
         System.out.println(amra.toString());
         TodoItem toDoGoran = new TodoItem("Assignment Part 1","Constructs, Unit test", LocalDate.of(2023,12,11),goran);
         toDoGoran.setDone(true);
+        TodoItem toDoAmra = new TodoItem("Something", "Do", LocalDate.of(2024,12,4),goran);
+        TodoItem forGoran = new TodoItem("New","Task",LocalDate.of(2024,6,6),goran);
 
         System.out.println(toDoGoran.getSummary());
         
@@ -27,9 +29,17 @@ public class Main {
 
 
         System.out.println("overdue " + toDoGoran.isOverdue());
-        System.out.println("todo id " + toDoGoran.getId());
+        System.out.println("toDoGoran id " + toDoGoran.getId());
+        System.out.println("toDoAmra id " + toDoAmra.getId());
+
 
         TodoItemTask taskForGoran = new TodoItemTask(toDoGoran,goran);
+        TodoItemTask newTaskGoran = new TodoItemTask(forGoran,goran);
+        System.out.println("taskForGoran id " + taskForGoran.getId());
+        System.out.println("newTaskGoran id " + newTaskGoran.getId());
+
+        System.out.println("goran id " + goran.getId());
+        System.out.println("amra id " + amra.getId());
 
         //taskForGoran.setAssigned(false);
         System.out.println("is Assigned " + taskForGoran.isAssigned());
