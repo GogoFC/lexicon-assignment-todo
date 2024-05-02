@@ -1,6 +1,6 @@
 package se.lexicon;
 
-import org.w3c.dom.ls.LSOutput;
+import se.lexicon.model.*;
 
 import java.time.LocalDate;
 
@@ -22,7 +22,7 @@ public class Main {
 
 
         //System.out.println(toDoGoran.getCreator());
-        AppUser me = new AppUser("gogo","pass",AppRole.ROLE_APP_ADMIN);
+        AppUser me = new AppUser("gogo","pass", AppRole.ROLE_APP_ADMIN);
 
         System.out.println(me.getRole());
         System.out.println(goran.hashCode());

@@ -1,8 +1,8 @@
-package se.lexicon.sequencers;
+package se.lexicon.data.sequencers;
 
-public class PersonIdSequencer {
+public class TodoItemIdSequencer {
 
-    public static int currentId;
+    private static int currentId;
 
     public static int nextId(){
         return ++currentId;
@@ -13,6 +13,6 @@ public class PersonIdSequencer {
     }
 
     public static void setCurrentId(int currentId) {
-        PersonIdSequencer.currentId = currentId;
+        TodoItemIdSequencer.currentId = currentId;
     }
 }

@@ -1,6 +1,6 @@
-package se.lexicon;
+package se.lexicon.model;
 
-import se.lexicon.sequencers.PersonIdSequencer;
+import se.lexicon.data.sequencers.PersonIdSequencer;
 
 import java.util.Objects;
 import java.util.StringJoiner;

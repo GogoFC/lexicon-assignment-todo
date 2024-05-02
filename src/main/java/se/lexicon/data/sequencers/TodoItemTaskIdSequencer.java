@@ -1,4 +1,4 @@
-package se.lexicon.sequencers;
+package se.lexicon.data.sequencers;
 
 public class TodoItemTaskIdSequencer {
 

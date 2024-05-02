@@ -1,8 +1,6 @@
-package se.lexicon;
+package se.lexicon.model;
 
-import se.lexicon.sequencers.TodoItemTaskIdSequencer;
-
-import java.util.StringJoiner;
+import se.lexicon.data.sequencers.TodoItemTaskIdSequencer;
 
 public class TodoItemTask {
 

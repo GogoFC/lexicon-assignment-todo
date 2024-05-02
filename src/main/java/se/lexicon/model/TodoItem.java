@@ -1,9 +1,8 @@
-package se.lexicon;
+package se.lexicon.model;
 
-import se.lexicon.sequencers.TodoItemIdSequencer;
+import se.lexicon.data.sequencers.TodoItemIdSequencer;
 
 import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
 import java.util.StringJoiner;
 
 public class TodoItem {
